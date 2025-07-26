@@ -1,120 +1,138 @@
 <!DOCTYPE html>
 <html lang="fa" dir="rtl">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>خرید V2Ray وی‌پی‌ان با تست رایگان | ربات o2netsbot</title>
-  <meta name="description" content="خرید وی‌پی‌ان V2Ray پرسرعت با تست رایگان از ربات تلگرام. تحویل آنی، بدون محدودیت، قابل استفاده در اندروید، ویندوز، آیفون.">
-  <meta name="keywords" content="خرید v2ray, خرید وی‌پی‌ان وی‌توری, تست رایگان v2ray, ربات تلگرام v2ray, v2ray اندروید, v2ray آیفون, وی‌پی‌ان پرسرعت">
-  <meta name="robots" content="index, follow">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>خرید V2Ray با تست رایگان | ربات o2netsbot</title>
+  <meta name="description" content="خرید وی‌پی‌ان V2Ray با تست رایگان از ربات تلگرام o2netsbot. تحویل آنی، قابل استفاده در همه دستگاه‌ها.">
+  <meta name="keywords" content="خرید V2ray, وی‌پی‌ان وی‌توری, تست رایگان V2ray, ربات تلگرام وی‌پی‌ان, V2ray رایگان, V2ray آیفون, V2ray اندروید">
+
+  <!-- فونت فارسی Vazirmatn -->
+  <link href="https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn-font@v33.003/Vazirmatn-font-face.css" rel="stylesheet" type="text/css" />
+
   <style>
     body {
       margin: 0;
       font-family: 'Vazirmatn', sans-serif;
-      background: linear-gradient(to bottom, #121212, #1f1f1f);
-      color: #f5f5f5;
+      background-color: #f5f7fa;
+      color: #222;
     }
 
     header {
-      background: url('https://images.unsplash.com/photo-1610057097764-fffb1a2ce5e1?auto=format&fit=crop&w=1600&q=80') no-repeat center center / cover;
-      padding: 4rem 1rem;
+      background: linear-gradient(120deg, #0088cc, #005f88);
+      color: white;
+      padding: 3rem 1rem;
       text-align: center;
-      color: #ffffff;
-      position: relative;
-    }
-
-    header::after {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background: rgba(0, 0, 0, 0.6);
     }
 
     header h1 {
-      position: relative;
-      font-size: 2.5rem;
-      z-index: 1;
+      font-size: 2.2rem;
+      margin-bottom: 1rem;
     }
 
     header p {
-      position: relative;
-      z-index: 1;
       font-size: 1.2rem;
-      margin-top: 0.5rem;
+      opacity: 0.9;
+    }
+
+    .bot-box {
+      background: white;
+      max-width: 380px;
+      margin: -3rem auto 2rem;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+      border-radius: 16px;
+      padding: 1.5rem;
+      text-align: center;
+    }
+
+    .bot-box img {
+      width: 80px;
+      margin-bottom: 1rem;
+    }
+
+    .bot-box h2 {
+      font-size: 1.4rem;
+      margin-bottom: 0.8rem;
+    }
+
+    .bot-box a {
+      display: inline-block;
+      margin-top: 1rem;
+      background: #00c853;
+      color: white;
+      padding: 0.8rem 1.6rem;
+      border-radius: 10px;
+      text-decoration: none;
+      font-size: 1rem;
+      transition: 0.3s;
+    }
+
+    .bot-box a:hover {
+      background: #00a844;
     }
 
     main {
       max-width: 800px;
       margin: auto;
-      padding: 2rem;
-    }
-
-    h2 {
-      color: #4fc3f7;
-      margin-top: 2rem;
-    }
-
-    p {
-      font-size: 1.1rem;
-      line-height: 2;
+      padding: 2rem 1rem;
     }
 
     .features {
-      background: #212121;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+      margin-top: 2rem;
+    }
+
+    .feature {
+      background: white;
       border-radius: 12px;
-      padding: 1.5rem;
-      margin-top: 1rem;
+      padding: 1.2rem;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.07);
     }
 
-    .features ul {
-      list-style: none;
-      padding: 0;
+    .feature h3 {
+      color: #1976d2;
+      margin-bottom: 0.5rem;
     }
 
-    .features li {
-      margin: 0.5rem 0;
-      padding-right: 1rem;
-      position: relative;
-    }
-
-    .features li::before {
-      content: "✔️";
-      position: absolute;
-      right: 0;
-      color: #4caf50;
-    }
-
-    .cta {
+    .cta-banner {
+      margin-top: 3rem;
+      background: #e3f2fd;
+      padding: 2rem;
+      border-radius: 12px;
       text-align: center;
-      margin: 3rem 0 2rem;
     }
 
-    .cta a {
-      background: #00c853;
+    .cta-banner a {
+      background: #0088cc;
       color: white;
-      padding: 1rem 2rem;
-      border-radius: 8px;
+      padding: 0.9rem 2rem;
+      border-radius: 10px;
+      font-size: 1.1rem;
       text-decoration: none;
-      font-size: 1.3rem;
-      box-shadow: 0 4px 15px rgba(0, 200, 83, 0.5);
-      transition: background 0.3s;
-    }
-
-    .cta a:hover {
-      background: #00b248;
+      display: inline-block;
+      margin-top: 1rem;
     }
 
     footer {
       text-align: center;
-      padding: 2rem 1rem;
       font-size: 0.9rem;
-      background: #1a1a1a;
-      color: #aaa;
+      color: #666;
+      padding: 2rem 1rem;
     }
 
-    @media (max-width: 600px) {
+    @media(max-width: 600px) {
+      .features {
+        grid-template-columns: 1fr;
+      }
+
       header h1 {
-        font-size: 2rem;
+        font-size: 1.7rem;
+      }
+
+      .bot-box {
+        margin-top: -2rem;
       }
     }
   </style>
@@ -122,45 +140,49 @@
 <body>
 
 <header>
-  <h1>خرید وی‌پی‌ان V2Ray با تست رایگان</h1>
-  <p>از طریق ربات تلگرامی <strong>@o2netsbot</strong> فقط در چند ثانیه!</p>
+  <h1>خرید V2Ray با تست رایگان</h1>
+  <p>سرویس سریع و امن، مخصوص کاربران حرفه‌ای — تست رایگان از ربات تلگرام!</p>
 </header>
+
+<div class="bot-box">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/8/82/Telegram_logo.svg" alt="تلگرام ربات" />
+  <h2>ربات رسمی فروش: @o2netsbot</h2>
+  <p>دریافت تست رایگان و خرید سرویس فقط با چند کلیک</p>
+  <a href="https://t.me/o2netsbot" target="_blank">🚀 ورود به ربات تلگرام</a>
+</div>
 
 <main>
   <section>
-    <h2>وی‌توری با کیفیت بالا و پایداری عالی</h2>
-    <p>
-      اگر به دنبال اینترنت آزاد، پرسرعت و بدون قطعی هستید، سرویس‌های V2Ray ما را امتحان کنید.
-      مناسب برای <strong>اندروید، آیفون، ویندوز و مک</strong> با قابلیت عبور از فیلترینگ شدید.
-    </p>
+    <h2>ویژگی‌های سرویس</h2>
+    <div class="features">
+      <div class="feature">
+        <h3>تحویل آنی</h3>
+        <p>پس از انتخاب پلن، بلافاصله لینک اتصال دریافت می‌کنی.</p>
+      </div>
+      <div class="feature">
+        <h3>سازگاری کامل</h3>
+        <p>با V2rayN، V2rayNG، Shadowrocket و Stash قابل استفاده است.</p>
+      </div>
+      <div class="feature">
+        <h3>تست رایگان واقعی</h3>
+        <p>قبل از خرید کیفیت رو ببین، بدون ریسک امتحان کن!</p>
+      </div>
+      <div class="feature">
+        <h3>پشتیبانی سریع</h3>
+        <p>از طریق پشتیبانی تلگرام همیشه در دسترس هستیم.</p>
+      </div>
+    </div>
   </section>
 
-  <section class="cta">
-    <a href="https://t.me/o2netsbot" target="_blank">🚀 دریافت تست رایگان از ربات تلگرام</a>
-  </section>
-
-  <section class="features">
-    <h2>مزایای سرویس ما</h2>
-    <ul>
-      <li>تحویل آنی پس از خرید</li>
-      <li>پشتیبانی تلگرامی سریع و حرفه‌ای</li>
-      <li>سازگار با V2rayNG، Shadowrocket، V2rayN و غیره</li>
-      <li>رمزگذاری پیشرفته برای امنیت بیشتر</li>
-      <li>بدون نیاز به دانش فنی</li>
-    </ul>
-  </section>
-
-  <section>
-    <h2>چرا تست رایگان؟</h2>
-    <p>
-      ما به کیفیت سرویس‌هامون مطمئنیم، برای همین با خیال راحت تست رایگان در اختیار شما می‌ذاریم.
-      کافیه وارد ربات <strong><a href="https://t.me/o2netsbot" target="_blank">@o2netsbot</a></strong> بشید و روی دکمه "دریافت تست رایگان" بزنید!
-    </p>
-  </section>
+  <div class="cta-banner">
+    <h2>الان تست رایگان بگیر!</h2>
+    <p>فقط کافیه وارد ربات بشی و گزینه "تست رایگان" رو بزنی 👇</p>
+    <a href="https://t.me/o2netsbot" target="_blank">🎯 دریافت تست در تلگرام</a>
+  </div>
 </main>
 
 <footer>
-  <p>© 2025 خرید V2Ray با تست رایگان | ارتباط با ما در <a href="https://t.me/o2netsbot" target="_blank">تلگرام</a></p>
+  © 2025 خرید V2Ray از طریق ربات @o2netsbot | تمام حقوق محفوظ است.
 </footer>
 
 </body>
